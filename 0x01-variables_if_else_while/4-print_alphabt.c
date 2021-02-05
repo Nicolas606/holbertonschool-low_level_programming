@@ -9,13 +9,16 @@
  */
 int main(void)
 {
-	int n = 122;
+	int l = 97;
 
-	while (n > 97)
+	while (l < 123)
 	{
-		if(n != 101 && n != 113)i
-		putchar(n);
-		n++;
+		if (l != 101 && l != 113)
+		{
+			putchar(l);
+		}
+
+		l++;
 	}
 	putchar('\n');
 	return (0);
