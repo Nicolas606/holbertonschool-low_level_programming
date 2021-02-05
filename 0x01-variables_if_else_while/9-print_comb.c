@@ -9,13 +9,17 @@
  */
 int main(void)
 {
-	int n = 122;
+	int number = 48;
 
-	while (n > 97)
+	while (number < 58)
 	{
-		if(n != 101 && n != 113)i
-		putchar(n);
-		n++;
+		putchar(number);
+		if (number < 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
+		number++;
 	}
 	putchar('\n');
 	return (0);
