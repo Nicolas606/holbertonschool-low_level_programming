@@ -8,21 +8,11 @@
  */
 int main(void)
 {
-	int n;
-	int letra;
+	char x;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-
-	/* your code goes there */
-
-	letra = 97;
-
-	while (letra > 122)
+	for (x = 'a'; x <= 'z'; x++)
 	{
-		putchar(letra);
-		letra = letra + 1;
+		putchar(x);
 	}
-	return (0);
+	return 0;
 }
-
