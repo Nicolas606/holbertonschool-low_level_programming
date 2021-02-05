@@ -18,7 +18,7 @@ int main(void)
 		{
 			putchar(li);
 			putchar(co);
-			if (li != 57 && co != 57)
+			if (li != 57 || co != 57)
 			{
 				putchar(44);
 				putchar(32);
