@@ -8,25 +8,25 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int de = 48;
+	int li = 48;
 
-	while (de < 58)
+	while (li < 58)
 	{
-		int uni = 48;
+		int co = 48;
 
-		while (uni < 58)
+		while (co < 58)
 		{
-			putchar(de);
-			putchar(uni);
-			if (de != 57 || uni != 57)
+			putchar(li);
+			putchar(co);
+			if (li != 57 && co != 57)
 			{
 				putchar(44);
 				putchar(32);
 			}
-			uni++;
+			co++;
 		}
 
-		de++;
+		li++;
 	}
 	putchar(10);
 	return (0);
