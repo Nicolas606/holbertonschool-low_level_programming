@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_sign - this command print the sign 
- *@c: the caracter print
+*print_sign - this command print the sign
+ *@n: the caracter print
  *
  * Return: int
  */
