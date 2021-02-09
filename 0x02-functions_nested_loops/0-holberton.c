@@ -11,11 +11,11 @@ int main(void)
 {
 	char frase[] = "Holberton";
 	int a;
-	
+
 	for (a = 0 ; a < 9 ; a++)
 	{
 		_putchar(frase[a]);
 	}
 	_putchar('\n');
-	return 0;
+	return (0);
 }
