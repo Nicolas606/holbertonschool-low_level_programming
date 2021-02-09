@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-*print_sign - this command print the sign
+*_abs - this command print the sign
  *@c: the caracter print
  *
  * Return: int
