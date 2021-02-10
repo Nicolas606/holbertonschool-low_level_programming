@@ -1,25 +1,18 @@
 #include "holberton.h"
-
 /**
 *print_last_digit - this command print the last digit
- *
+ *@a: return fuvtion
  *
  * Return: int
  */
-int print_last_digit(int)
+int print_last_digit(int a)
 {
-	int a, b;
+	int ud = (a % 10);
 
-	for (a = 0; a < 24; a++)
+	if (a < 0)
 	{
-		for (b = 0; b <= 59 ; b++)
-		{
-			_putchar((a / 10) + 48);
-			_putchar((a % 10) + 48);
-			_putchar(':');
-			_putchar((b / 10) + 48);
-			_putchar((b % 10) + 48);
-			_putchar('\n');
-		}
+		ud = ud * -1;
 	}
+	_putchar(ud + 48);
+	return (ud);
 }
