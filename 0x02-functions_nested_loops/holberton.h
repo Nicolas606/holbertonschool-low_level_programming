@@ -47,3 +47,29 @@ int _abs(int);
 
 #endif
 
+#ifndef JACK_BAUER_H
+#define JACK_BAUER_H
+
+void jack_bauer(void);
+
+#endif
+
+#ifndef TIMES_TABLE_H
+#define TIMES_TABLE_H
+
+void times_table(void);
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
