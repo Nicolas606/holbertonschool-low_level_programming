@@ -2,7 +2,7 @@
 
 /**
 *jack_bauer - this command print the sign
- *@c: the caracter print
+ *
  *
  * Return: int
  */
