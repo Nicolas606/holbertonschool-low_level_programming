@@ -47,6 +47,13 @@ int _abs(int);
 
 #endif
 
+#ifndef _PRINT_LAST_DIGIT_H
+#define _PRINT_LAST_DIGIT_H
+
+int print_last_digit(int);
+
+#endif
+
 #ifndef JACK_BAUER_H
 #define JACK_BAUER_H
 
@@ -61,6 +68,12 @@ void times_table(void);
 
 #endif
 
+#ifndef ADD_H
+#define ADD_H
+
+int add(int, int);
+
+#endif
 
 
 
