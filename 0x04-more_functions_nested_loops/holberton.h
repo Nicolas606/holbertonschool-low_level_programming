@@ -26,3 +26,16 @@ int mul(int a, int b);
 
 #endif
 
+#ifndef PRINT_NUMBERS_H
+#define PRINT_NUMBERS_H
+
+void print_numbers(void);
+
+#endif
+
+#ifndef PRINT_MOST_NUMBERS_H
+#define PRINT_MOST_NUMBERS_H
+
+void print_most_numbers(void);
+
+#endif
