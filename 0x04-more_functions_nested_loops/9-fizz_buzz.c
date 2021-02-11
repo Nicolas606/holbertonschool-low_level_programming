@@ -1,7 +1,7 @@
 #include "stdio.h"
 
 /**
- * print_line - this command print the numbers from 0 to 14
+ * main - At this point the function begins
  *
  *
  * Return: int
@@ -12,11 +12,11 @@ int main(void)
 
 	for (numeros = 1; numeros <= 100; numeros++)
 	{
-		if( numeros % 3 == 0)
+		if (numeros % 3 == 0)
 		{
 			printf("Fizz ");
 		}
-		if(numeros % 5 == 0)
+		if (numeros % 5 == 0)
 		{
 			printf("Buzz ");
 		}
