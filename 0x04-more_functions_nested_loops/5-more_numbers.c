@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * more_numbers - this command print the numbers except 2 and 4
+ * more_numbers - this command print the numbers from 0 to 14
  *
  *
  * Return: int
