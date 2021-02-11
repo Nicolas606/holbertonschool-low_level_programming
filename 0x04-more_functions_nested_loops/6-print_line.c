@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_line - this command print the numbers from 0 to 14
- *
+ * print_line - draws a straight line in the terminal
+ *@n: will control the number of times the cycle repeats
  *
  * Return: int
  */
@@ -10,12 +10,12 @@ void print_line(int n)
 {
 	int i;
 
-	for(i = 0; i <=n ; i++)
+	for (i = 0; i <= n ; i++)
 	{
-		if(i > 0)
+		if (i > 0)
 		{
 		_putchar('_');
 		}
 	}
-	_putchar('\n');	
+	_putchar('\n');
 }
