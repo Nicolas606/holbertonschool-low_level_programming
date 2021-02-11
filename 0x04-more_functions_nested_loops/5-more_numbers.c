@@ -8,14 +8,14 @@
  */
 void more_numbers(void)
 {
-	char number[] = "01234567891011121314";
 	int f, c;
 
 	for (f = 0; f <= 9; f++)
 	{
-		for (c = 0; c < 21; c++)
+		for (c = 0; c < 15; c++)
 		{
-			_putchar(number[c]);
+			_putchar((c % 10) + 48);
+			_putchar((c / 10) + 48);
 		}
 		_putchar('\n');
 	}
