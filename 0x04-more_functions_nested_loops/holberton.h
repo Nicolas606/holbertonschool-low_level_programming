@@ -53,3 +53,24 @@ void print_line(int n);
 void more_numbers(void);
 
 #endif
+
+#ifndef PRINT_DIAGONAL_H
+#define PRINT_DIAGONAL_H
+
+void print_diagonal(int n);
+
+#endif
+
+#ifndef PRINT_SQUARE_H
+#define PRINT_SQUARE_H
+
+void print_square(int size);
+
+#endif
+
+#ifndef PRINT_TRIANGLE_H
+#define PRINT_TRIANGLE_H
+
+void print_triangle(int size);
+
+#endif
