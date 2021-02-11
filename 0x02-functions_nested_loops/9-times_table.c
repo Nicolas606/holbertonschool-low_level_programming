@@ -2,25 +2,40 @@
 
 /**
 *times_table - this command print the sign
- *@c: the caracter print
  *
+  
  * Return: void
  */
 void times_table(void)
 {
-	int a, b;
+	int f, c;
 
-        for (a = '0'; a <='9'; a++)
-        {
-                for(b = '0'; b <='9'; b++)
-                {
-                        _putchar(a);
-                        _putchar(b);
-                        _putchar(',');
-                        _putchar(32);
-                        _putchar(32);
-                }
-        }
-        _putchar('\n');
+	for (f = 0; f <= 9; f++)
+	{
+		for (c = 0; c <= 9; c++)
+		{
+			int r = f * c;
 
+			if (r <= 9)
+			{
+				if (r > 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				_putchar(r + 48);
+			}
+
+			else if (r >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((r / 10) + 48);
+				_putchar((r % 10) + 48);
+
+			}
+		}
+		_putchar('\n');
+	}
 }
