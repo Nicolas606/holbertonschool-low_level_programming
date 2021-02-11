@@ -3,7 +3,6 @@
 /**
 *times_table - this command print the sign
  *
-  
  * Return: void
  */
 void times_table(void)
@@ -18,7 +17,7 @@ void times_table(void)
 
 			if (r <= 9)
 			{
-				if (r > 0)
+				if (c > 0)
 				{
 					_putchar(',');
 					_putchar(' ');
