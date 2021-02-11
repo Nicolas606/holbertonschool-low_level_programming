@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _islower - this command find the lowcaser
+ * _isupper - this command find the lowcaser
  *@c: the caracter print
  *
  * Return: int
