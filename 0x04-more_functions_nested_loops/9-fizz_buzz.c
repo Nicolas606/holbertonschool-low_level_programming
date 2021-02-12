@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+#include "holberto.h"
 /**
- * main - At this point the function begins
+ * main - print the number form 1 to 100
  *
  *
- * Return: int
+ * Return: voidi
  */
 int main(void)
 {
@@ -24,7 +24,7 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		else if (numeros % 3 != 0 && numeros % 5 != 0)
+		else
 		{
 			printf("%d ", numeros);
 		}
