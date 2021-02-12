@@ -1,5 +1,6 @@
+#include "holberton.h"
 #include <stdio.h>
-#include "holberto.h"
+
 /**
  * main - print the number form 1 to 100
  *
