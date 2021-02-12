@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 /**
  * main - At this point the function begins
@@ -12,11 +12,15 @@ int main(void)
 
 	for (numeros = 1; numeros <= 100; numeros++)
 	{
-		if (numeros % 3 == 0)
+		if (numeros % 3 == 0 && numeros % 5 == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (numeros % 3 == 0)
 		{
 			printf("Fizz ");
 		}
-		if (numeros % 5 == 0)
+		else if (numeros % 5 == 0)
 		{
 			printf("Buzz ");
 		}
