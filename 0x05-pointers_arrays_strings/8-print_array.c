@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * puts2 - function that prints every other character of a string,
- * starting with the first character, followed by a new line.
- * @str: variable that the exercise gives us
- *
+ * print_array -  function that prints n elements of an array of integers,
+ * followed by a new line.
+ * @a: variable that the exercise gives us
+ * @n: variable that the exercise give us
  * Return: int
  */
 void print_array(int *a, int n)
@@ -17,7 +17,6 @@ void print_array(int *a, int n)
 		printf("%d, ", *a);
 		a = a + 1;
 	}
-	printf("%d", *a);	
+	printf("%d", *a);
 	printf("\n");
-
 }
