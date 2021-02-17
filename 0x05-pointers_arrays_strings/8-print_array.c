@@ -23,7 +23,7 @@ void print_array(int *a, int n)
 			printf("%d, ", *a);
 			a = a + 1;
 		}
+		printf("%d", *a);
+		printf("\n");
 	}
-	printf("%d", *a);
-	printf("\n");
 }
