@@ -12,19 +12,14 @@ int _strcmp(char *s1, char *s2)
 	int i = 0;
 	int compares = 0;
 
-	if (s1[i] == s2[i])
-		return (0);
-
-	else
+	for (i = 0; s1[i] && s2[i]; i++)
 	{
-		for (i = 0; s1[i] && s2[i]; i++)
+		if (s1[i] != s2[i])
 		{
-			if (s1[i] != s2[i])
-			{
-				compares = s1[i] - s2[i];
-				break;
-			}
+			compares = s1[i] - s2[i];
+			break;
 		}
 	}
 	return (compares);
 }
+
