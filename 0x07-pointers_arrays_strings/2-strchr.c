@@ -7,7 +7,7 @@
  * @c: the character to search for
  *
  *
- * Return: 
+ * Return: s
  *
  */
 char *_strchr(char *s, char c)
