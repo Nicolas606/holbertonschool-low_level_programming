@@ -3,7 +3,7 @@
 
 /**
  * _memcpy- function that copies memory area
- * @des: memory space where you drink 
+ * @dest: memory space where you drink
  * @src: memory space that is taken
  * @n: function copies number the bytes
  *
