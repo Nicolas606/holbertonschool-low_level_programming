@@ -14,24 +14,26 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i = 0;
 	int j = 0;
+	int k;
 	unsigned int rest;
 
 	rest = 0;
 
-	/*if (s[i] || accept[j])
-		return (rest);
-
-	else
-	{*/
-		for (i = 0; s[i]; i++)
+	for (i = 0; s[i]; i++)
 		{
 			for (j = 0; accept[j]; j++)
 			{
 				if (s[i] == accept[j])
+				{
+					k = 1;
 					rest++;
+					break;
+				}
+				else
+					k = 0;
 			}
+			if (k == 0)
+				break;
 		}
-	
-	return (rest);
+		return (rest);
 }
-
