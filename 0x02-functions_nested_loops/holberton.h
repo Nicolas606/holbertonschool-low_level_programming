@@ -82,6 +82,13 @@ void print_to_98(int n);
 
 #endif
 
+#ifndef PRINT_TIMES_TABLE_H
+#define PRINT_TIMES_TABLE_H
+
+void print_times_table(int n);
+
+#endif
+
 
 
 
