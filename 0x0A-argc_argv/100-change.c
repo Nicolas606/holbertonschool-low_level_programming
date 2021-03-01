@@ -13,28 +13,34 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int coins[] = {25, 10, 5, 2, 1};
 	int suma = 0;
+	int total_coins = 0;
+	int i;
+	int cents = atoi(argv[1]);
 
-	if (argc > 1)
+	if (argc != 2)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			for (j = 0; argv[i][j]; j++)
-			{
-				if (isdigit(argv[i][j]))
-				continue;
+		printf("Error\n");
+		return (1);
+	}
 
-				else
-				{
-					printf("Error");
-					return (1);
-				}
+
+	for (i = 0; i < 5; i++)
+	{
+		while (suma < cents)
+		{
+			if (suma + coins[i] <= cents)
+			{
+				suma += coins[i];
+				total_coins += 1;
 			}
-			suma += atoi(argv[i]);
+
+			else
+			break;
 		}
 	}
 
-	printf("%d\n", rest);
+	printf("%d\n", total_coins);
 	return (0);
 }
