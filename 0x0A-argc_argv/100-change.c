@@ -38,7 +38,9 @@ cents = atoi(argv[1]);
 			}
 
 			else
+			{
 			break;
+			}
 		}
 	}
 
