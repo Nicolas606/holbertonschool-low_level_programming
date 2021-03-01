@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	int suma = 0;
 	int total_coins = 0;
 	int i;
-	int cents = atoi(argv[1]);
+	int cents;
 
 	if (argc != 2)
 	{
@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+cents = atoi(argv[1]);
 
 	for (i = 0; i < 5; i++)
 	{
