@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * _strdup - function that returns a pointer to a newly allocated space in
- *  memory, which contains a copy of the string given as a parameter.
+ * str_concat - function that concatenates two strings.
  *
- * @str: String that we are going to copy.
+ * @s1: variable where we are going to concatenate.
+ * @s2: variable that we are going to concatenate.
  *
  *
  *
@@ -16,27 +16,33 @@
 
 char *str_concat(char *s1, char *s2)
 {
-  int i;
-  int j;
-  int lengths1 = 0;
-  int lengths2 = 0;
-  char *s;
+	int i;
+	int j;
+	int lengths1 = 0;
+	int lengths2 = 0;
+	char *s;
+	char *space = "";
 
-  while (s1[lengths1])
-      lengths1++;
+	if (s1 == NULL)
+		s1 = space;
 
-  while (s2[lengths2])
-      lengths2++;
-
-  
-  s = malloc(sizeof(char) * (lengths1 + lengths2 + 1));
-
-  for (i = 0; i <= lengths1; i++)
-    *(s + i) = *(s1 + i);
-
-  for (i = 0, j= lengths1; i <= lengths2; i++, j++) 
-    *(s + j) = *(s2 + i);
+	if (s2 == NULL)
+		s2 = space;
 
 
-  return (s);
+	while (s1[lengths1])
+		lengths1++;
+
+	while (s2[lengths2])
+		lengths2++;
+
+	s = malloc(sizeof(char) * (lengths1 + lengths2 + 1));
+
+	for (i = 0; i <= lengths1; i++)
+		*(s + i) = *(s1 + i);
+
+	for (i = 0, j = lengths1; i <= lengths2; i++, j++)
+		*(s + j) = *(s2 + i);
+
+	return (s);
 }
