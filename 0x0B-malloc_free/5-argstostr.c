@@ -16,9 +16,26 @@
 char *argstostr(int ac, char **av)
 {
 int *s;
+int i, j;
+int length = 0;
 
 if(ac == 0 || av == 0)
 return (0);
+
+for (i = 0; i < ac; i++)
+{
+  for (j = 0; av[i][j]; j++)
+  {
+      length++
+  }
+}
+
+s = malloc(sizeof(char) * (length + ac + 1));
+
+if (s == 0)
+  return (0);
+
+
 
 
 
