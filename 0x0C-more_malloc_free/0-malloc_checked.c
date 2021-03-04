@@ -13,12 +13,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-void *memory;
+	void *memory;
 
-memory = malloc(b);
+	memory = malloc(b);
 
-if(memory == 0)
-exit(98);
+	if (memory == 0)
+		exit(98);
 
-return(memory);
+	return (memory);
 }
+
