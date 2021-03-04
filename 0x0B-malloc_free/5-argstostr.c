@@ -26,7 +26,7 @@ for (i = 0; i < ac; i++)
 {
   for (j = 0; av[i][j]; j++)
   {
-      length++
+      length++;
   }
 }
 
@@ -34,6 +34,10 @@ s = malloc(sizeof(char) * (length + ac + 1));
 
 if (s == 0)
   return (0);
+
+
+
+
 
 
 
