@@ -5,7 +5,7 @@
  * struct dog - new type
  * @name: The dog's name
  * @age: The dog's age
- * @owner: The dogś owner
+ * @owner: The dog's owner
  *
  * Description: Longer description
  */
