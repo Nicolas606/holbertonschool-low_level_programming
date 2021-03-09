@@ -1,53 +1,71 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
+char *copia(char *string);
+
+/**
+ * copia - return a copy
+ * @string: string
+ *
+ * Return: char
+*/
+
+char *copia(char *string)
+{
+	char *puntero;
+	int length = 0;
+	int i;
+
+	for (i = 0; string[i]; i++)
+		length++;
+
+	puntero = malloc(length + 1);
+
+	if (puntero == 0)
+		return (NULL);
+
+	for (i = 0; i <= length; i++)
+		puntero[i] = string[i];
+
+	return (puntero);
+}
+
+/**
+* *new_dog -  creates a new dog.
+*
+* @name: string whit the dog's name.
+* @age: integer with the age number.
+* @owner: string with the name of the dog's owner.
+*
+* Return: Void.
+*/
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-  dog_t *estructura;
-  int i, j;
-  int length_name, length_owner;
-  char *copia_name;
-  char *copia_owner;
+	dog_t *estructura;
 
-  estructura = malloc(sizeof(struct dog));//espacio para la estructura
 
-  if(estructura == 0)
-    return (NULL);
+	estructura = malloc(sizeof(struct dog));
 
-  for (i = 0; name[i]; i++)
-      length_name++;
+	if (estructura == 0)
+		return (NULL);
 
-  for (j = 0; owner[j]; j++)
-      length_owner++;
+	if (copia(name) == 0)
+	{
+		free(estructura);
+		return (NULL);
+	}
 
-  copia_name = malloc(length_name + 1 );//espacio para el nombre
+	if (copia(owner) == 0)
+	{
+		free(estructura);
+		free(copia(name));
+		return (NULL);
+	}
 
-  if ( copia_name == 0)
-  {
-    free (estructura);
-    return(NULL);
-  }
+	estructura->name = copia(name);
+	estructura->age = age;
+	estructura->owner = copia(owner);
 
-  copia_owner = malloc(length_owner + 1);//espacio para el owner
-
-  if ( copia_name == 0)
-  {
-    free (estructura);
-    free (copia_name);
-    return(NULL);
-  }
-
-  for(i = 0; i <= length_name ; i++ )//copiar el nombre en copia_name
-    copia_name[i] = name[i];
-
-  for (j = 0; j <= length_owner; j++)//copar el owner en copia_owner
-    copia_owner[j] = owner[j];
-
-  estructura->name = copia_name;
-  estructura->age = age;
-  estructura->owner = copia_owner;
-
-  return  (estructura);
-
+	return (estructura);
 }
