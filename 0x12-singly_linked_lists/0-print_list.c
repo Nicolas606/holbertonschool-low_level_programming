@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * struct list_s - singly linked list
+ * print_list - function that prints all the elements of a list_t list.
  *
  * @h: Pointer to list header.
  *
