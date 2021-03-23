@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - function that adds a new node at the beginning of a list_t list.
+ * add_node_end - function that adds a new node at the end of a list_t list.
  *
  * @head: Pointer to list header.
  * @str: The string to duplicate.
@@ -9,16 +9,17 @@
  * Return: The address of the new element or NULL if it failed.
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
+	list_t *copia = *head;
 	unsigned int length = 0;
 
 	if (head == 0)
 		return (0);
 
 	new = malloc(sizeof(list_t));
-	if (new == 0)
+	if (new == NULL)
 	{
 		free(new);
 		return (0);
@@ -35,9 +36,19 @@ list_t *add_node(list_t **head, const char *str)
 		length++;
 
 	new->len = length;
-	new->next = *head;
+	new->next = NULL;
 
-	*head = new;
+	if (*head == NULL)
+		{
+			*head = new;
+			return(new);
+		}
+
+		while (copia->next != NULL)
+				copia = copia->next;
+
+	copia->next = new;
 
 	return (new);
-}
+
+	}
