@@ -6,7 +6,6 @@
  *
  * @head: Pointer to list header.
  * @n: the integer to print.
- *
  * Return: The address of the new element or NULL if it failed.
  */
 
@@ -20,7 +19,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	new = malloc(sizeof(listint_t));
 	if (new == 0)
 	{
-		free(new);
 		return (0);
 	}
 
