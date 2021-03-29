@@ -15,19 +15,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int file_description;
 	ssize_t size;
 
-	if (filename == NULL)
-		return(0);
+	if (filename == NULL || letters == NULL)
+		return (0);
 
 	file_description = open(filename, O_RDWR);
 
 	if (file_description == -1)
-		return(0);
+		return (0);
 
 	buffer = malloc(sizeof(char) * letters);
 
-	if(buffer == NULL)
-		return(0);
-	
+	if (buffer == NULL)
+		return (0);
+
 	size = read(file_description, buffer, letters);
 	size = write(1, buffer, size);
 
