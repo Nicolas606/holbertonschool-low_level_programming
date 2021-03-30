@@ -1,5 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
