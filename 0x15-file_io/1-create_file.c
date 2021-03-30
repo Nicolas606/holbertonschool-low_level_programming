@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int file_description, counter, file_w;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 		return (-1);
 
 	file_description = open(filename, O_CREAT |	O_WRONLY | O_TRUNC, 0600);
