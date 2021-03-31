@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
-* append_text_to_file- function that appends text at the end of a file.
+* main - program that copies the content of a file to another file.
 *
-* @filename: name of file.
-* @text_content: text contained in the file.
+* @argc: Argument counter.
+* @argv: Argument vector.
 *
-* Return: 1 on success, -1 on failure.
+* Return:  0 on success. 91, 98, 99 or 100 on failure.
 */
 
 int main(int argc, char **argv)
@@ -21,9 +21,9 @@ int main(int argc, char **argv)
 	}
 
 	file_descriptor1 = open(argv[1], O_RDONLY);
-	file_descriptor2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664 );
+	file_descriptor2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
-	while ((byte_rd= read(file_descriptor1, buffer, 1024)) > 0)
+	while ((byte_rd = read(file_descriptor1, buffer, 1024)) > 0)
 		byte_wr = write(file_descriptor2, buffer, byte_rd);
 
 	if (file_descriptor1 == -1 || byte_rd == -1)
