@@ -2,32 +2,35 @@
 #include <stdio.h>
 
 /**
- * main - print the number form 1 to 100
- *
+ * main - program that prints the numbers from 1 to 100, followed by a new line.
+ * But for multiples of three print Fizz instead of the number and for the 
+ * multiples of five print Buzz. For numbers which are multiples of both three 
+ * and five print FizzBuzz.
  *
  * Return: voidi
  */
 int main(void)
 {
-	int numeros = 100;
+	int numeros;
 
-	for (numeros = 1; numeros <= 100; numeros++)
+	printf("%d", 1);
+	for (numeros = 2; numeros <= 100; numeros++)
 	{
 		if (numeros % 3 == 0 && numeros % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		}
 		else if (numeros % 3 == 0)
 		{
-			printf("Fizz ");
+			printf(" Fizz");
 		}
 		else if (numeros % 5 == 0)
 		{
-			printf("Buzz ");
+			printf(" Buzz");
 		}
 		else
 		{
-			printf("%d ", numeros);
+			printf(" %d", numeros);
 		}
 	}
 	printf("\n");
