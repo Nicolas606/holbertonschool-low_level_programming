@@ -1,11 +1,9 @@
 #include "lists.h"
 
 /**
- * free_list -function that frees a list_t list.
+ * free_dlistint -function that frees a list_t list.
  *
  * @head: linked list.
- *
- *
  *
  **/
 
@@ -16,7 +14,7 @@ void free_dlistint(dlistint_t *head)
 	if (head == NULL)
 		return;
 
-	while (head != NULL )
+	while (head != NULL)
 	{
 		copy = head;
 		head = head->next;
