@@ -9,15 +9,17 @@
 
 char *cap_string(char *str)
 {
-	int i = 0, j = 0;
-	char *separators = "\t\n,;.!?\"(){}";
+	int i, j;
+	char *separators = " \t\n,;.!?\"(){}";
 
 	if (str[0] >= 97 && str[0] <= 122)
-		str[0] = str[0] - 32;
-
-	while (str[i])
 	{
-		while (separators[j])
+		str[0] = str[0] - 32;
+	}
+
+	for (i = 0; str[i]; i++)
+	{
+		for (j = 0; separators[j]; j++)
 		{
 			if (str[i] == separators[j] && str[i + 1] != '\0')
 			{
@@ -27,9 +29,7 @@ char *cap_string(char *str)
 				}
 				break;
 			}
-			j++;
 		}
-		i++;
 	}
 	return (str);
 }
