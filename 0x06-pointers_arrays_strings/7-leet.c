@@ -17,12 +17,12 @@ char *leet(char *str)
 	{
 		for (j = 0; letter[j]; j++)
 		{
-			if (str[i == letter[j]])
+			if (str[i] == letter[j])
 			{
 				str[i] = number[j];
 				break;
 			}
 		}
 	}
-	return(str);
+	return (str);
 }
