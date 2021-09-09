@@ -10,33 +10,46 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *head, *new;
-	unsigned long int posicion = 0;
+	unsigned long int index;
+	hash_node_t *tmp;
+	int control = 0;
 
-	if (ht == NULL || key == NULL || key[0] == NULL)
+	if (ht == NULL || key == NULL || key[0] == '\0')
 		return (0);
 
-	posicion = key_index((const unsigned char *)key, ht->size);
-
-	head = ht->array[posicion];
-
-	while (head)
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->array[index];
+	while (tmp != NULL)
 	{
-		if (strcmp(key, head->key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 		{
-			free(head->value);
-			head->value = strdup(value);
+			free(tmp->value);
+			tmp->value = strdup(value);
 			return (1);
 		}
-		head = head->next;
+		tmp = tmp->next;
 	}
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-		return (NULL);
+	control = add_node(&ht->array[index], key, value);
+	return (control);
+}
 
-	new->value = strdup(value);
+/**
+ * add_node - adds an element to linkedlist.
+ * @head: Pointer to linkedlist head
+ * @key: The key
+ * @value: Is the value associated with the key.
+ * Return: 1 if succeeded, 0 otherwise.
+ */
+int add_node(hash_node_t **head, const char *key, const char *value)
+{
+	hash_node_t *new;
+
+	new = malloc(sizeof(hash_node_t));
 	new->key = strdup(key);
-	new->next = head;
-	ht->array[posicion] = new;
+	new->value = strdup(value);
+	if (new->key == NULL || new->value == NULL)
+		return (0);
+	new->next = *head;
+	*head = new;
 	return (1);
 }
